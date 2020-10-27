@@ -1,0 +1,9 @@
+pandas
+
+Flask
+
+scikit-learn
+
+gunicorn
+
+pytest
