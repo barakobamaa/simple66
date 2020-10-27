@@ -1,4 +1,6 @@
 from flask import Flask, flash, request, redirect, url_for,render_template
+from werkzeug.utils import secure_filename
+import os.path
 
 
 UPLOAD_FOLDER = '/uploads'
@@ -28,12 +30,12 @@ def upload_file():
             filename = secure_filename(file.filename)
             print(filename)
             #rand_name = randrange(999)
-            #img_dir = '{}.jpg'.format(rand_name)
-            #file.save(os.path.join('input',img_dir))
+            img_dir = '77777.jpg'
+            file.save(os.path.join('input',img_dir))
 
             #pred_dir = pred_img(img_dir)
-            #out_img_path='/static/{}'.format(pred_dir)
-            return render_template("resault.html", user_image = out_img_path)
+            out_img_path='/static/{}'.format(img_dir)
+            return render_template("resault.html", user_image = img_dir)
 
                    
          
