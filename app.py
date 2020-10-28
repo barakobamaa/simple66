@@ -121,12 +121,12 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             print(filename)
-            #rand_name = randrange(999)
-            img_dir = '77777.jpg'
-            file.save(os.path.join('static',img_dir))
+            rand_name = randrange(999)
+            img_dir = '{}.jpg'.format(rand_name)
+            file.save(os.path.join('input',img_dir))
 
-            #pred_dir = pred_img(img_dir)
-            out_img_path='static/{}'.format(img_dir)
+            pred_dir = pred_img(img_dir)
+            out_img_path='/static/{}'.format(pred_dir)
             return render_template("resault.html", user_image = out_img_path)
 
                    
