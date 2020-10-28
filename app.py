@@ -5,13 +5,13 @@ from tensorflow.keras.models import load_model
 import cv2
 import gdown
 
-if(os.path.isfile('model/datset.csv')):
+if(os.path.isfile('model/model_a.h5')):
     print('model exists')
 
 else:
     print('model not found')
-    url = 'https://drive.google.com/file/d/1PhSwy7YyUK3_pbwwp-6oUKcvJ6jAEbTU/view?usp=sharing'
-    output = 'model/datset.csv'
+    url = 'https://drive.google.com/file/d/1GcQPYNy7hWzj7X0nUtYbgVbIoVs0DjYc/view?usp=sharing'
+    output = 'model/model_a.h5'
     gdown.download(url, output, quiet=False) 
     print('model downloaded')
 
