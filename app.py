@@ -14,10 +14,10 @@ if(os.path.isfile('model/model_a.h5')):
 
 else:
     print('model not found')
-    url = 'https://drive.google.com/file/d/1GcQPYNy7hWzj7X0nUtYbgVbIoVs0DjYc/view?usp=sharing'
+    url = 'https://drive.google.com/uc?export=download&id=1GcQPYNy7hWzj7X0nUtYbgVbIoVs0DjYc'
     output = 'model/model_a.h5'
     gdown.download(url, output, quiet=False) 
-    print('model downloaded')
+    print('!!!!!!!!!!  model downloaded!!!!!!!!!!!!!!!!!!!')
 
 UPLOAD_FOLDER = '/uploads'
 ALLOWED_EXTENSIONS = { 'jpg'}
