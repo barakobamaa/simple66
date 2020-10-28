@@ -5,4 +5,4 @@ gunicorn
 pytest
 tensorflow
 gdown
-opencv
+opencv-python-headless==4.2.0.32
