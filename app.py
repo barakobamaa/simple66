@@ -1,7 +1,19 @@
 from flask import Flask, flash, request, redirect, url_for,render_template
 from werkzeug.utils import secure_filename
 import os.path
+from tensorflow.keras.models import load_model
+import cv2
+import gdown
 
+if(os.path.isfile('model/datset.csv')):
+    print('model exists')
+
+else:
+    print('model not found')
+    url = 'https://drive.google.com/file/d/1PhSwy7YyUK3_pbwwp-6oUKcvJ6jAEbTU/view?usp=sharing'
+    output = 'model/datset.csv'
+    gdown.download(url, output, quiet=False) 
+    print('model downloaded')
 
 UPLOAD_FOLDER = '/uploads'
 ALLOWED_EXTENSIONS = { 'jpg'}
