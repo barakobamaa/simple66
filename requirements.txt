@@ -5,4 +5,4 @@ gunicorn
 pytest
 tensorflow
 gdown
-cv2
+opencv
