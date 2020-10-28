@@ -6,3 +6,8 @@ pytest
 tensorflow
 gdown
 opencv-python-headless==4.2.0.32
+pandas
+matplotlib
+numpy
+werkzeug
+random
