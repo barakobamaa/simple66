@@ -31,11 +31,11 @@ def upload_file():
             print(filename)
             #rand_name = randrange(999)
             img_dir = '77777.jpg'
-            file.save(os.path.join('input',img_dir))
+            file.save(os.path.join('static',img_dir))
 
             #pred_dir = pred_img(img_dir)
-            out_img_path='/static/{}'.format(img_dir)
-            return render_template("resault.html", user_image = img_dir)
+            out_img_path='static/{}'.format(img_dir)
+            return render_template("resault.html", user_image = out_img_path)
 
                    
          
