@@ -1,9 +1,8 @@
 pandas
-
 Flask
-
 scikit-learn
-
 gunicorn
-
 pytest
+tensorflow
+gdown
+cv2
