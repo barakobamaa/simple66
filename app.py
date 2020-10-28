@@ -31,7 +31,16 @@ def pred_img(img_dir):
     # اگر نبود دانلود شود
 
     image_size = 256
-    
+    if(os.path.isfile('model/model_a.h5')):
+        print('model exists')
+
+    else:
+        print('model not found')
+        url = 'https://drive.google.com/file/d/1GcQPYNy7hWzj7X0nUtYbgVbIoVs0DjYc/view?usp=sharing'
+        output = 'model/model_a.h5'
+        gdown.download(url, output, quiet=False) 
+        print('model downloaded')
+        
     model = load_model('model/model_a.h5')
     
 
